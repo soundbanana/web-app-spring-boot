@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-security")
@@ -42,6 +43,9 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 
     implementation("javax.mail:javax.mail-api:1.6.2")
+
+    implementation("com.fasterxml.jackson.core:jackson-annotations:2.13.0")
+    implementation("javax.servlet:javax.servlet-api:4.0.1")
 }
 
 tasks.getByName<Test>("test") {
@@ -50,6 +54,6 @@ tasks.getByName<Test>("test") {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "com.chemaev.Application" // Replace 'com.chemaev.MainClass' with the fully qualified name of your main class
+        attributes["Main-Class"] = "com.chemaev.Application"
     }
 }
