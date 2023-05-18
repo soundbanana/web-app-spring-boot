@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PROD_ DB HOST}:${PROD_ DB_PORT}/${PROD_DB NAME}
+    username: ${PROD_DB_ USERNAME}
+    password: ${PROD_DB_PASSWORD}
+    name: web-app-spring-boot
+
+  sql:
+    init:
+      mode: always # you won't do this in prod, I'm just doing this for demo purposes
