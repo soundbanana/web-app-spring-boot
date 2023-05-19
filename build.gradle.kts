@@ -53,6 +53,7 @@ tasks.getByName<Test>("test") {
 }
 
 tasks.jar {
+    enabled = false
     manifest {
         attributes["Main-Class"] = "com.chemaev.Application"
     }
